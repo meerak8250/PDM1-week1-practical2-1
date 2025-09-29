@@ -75,6 +75,7 @@ async function runTests(canvas) {
         TestResults.addPass("Your sketch exactly matches the expected output!");
         checkAllRectsHaveMode(CENTER, getShapes());
     } else {
+        TestResults.addFail("Your sketch does not exactly match the expected output. Check the placement and colours of your shapes.");
         checkCanvasSize(300, 300);
         checkSettingCalledBeforeShapes(BACKGROUND, true, true);
         checkAllRectsHaveMode(CENTER, getShapes());

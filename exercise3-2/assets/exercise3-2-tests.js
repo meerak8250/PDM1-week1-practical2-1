@@ -46,12 +46,12 @@ async function runTests(canvas) {
         checkCanvasSize(300, 300);
         checkSettingCalledBeforeShapes(BACKGROUND, true, true);
         checkBackground(color(255), "white");
-        const expectedShapes = [new TestSquare(0, 0, 100, "CORNER", true, true, color(0)),
-                                new TestSquare(100, 100, 100, "CORNER", true, true, color(0)),
-                                new TestSquare(200, 200, 100, "CORNER", true, true, color(0)),
-                                new TestCircle(50, 50, 100, "CENTER", true, true, color(150)),
-                                new TestCircle(150, 150, 100, "CENTER", true, true, color(150)),
-                                new TestCircle(250, 250, 100, "CENTER", true, true, color(150))];
+        const expectedShapes = [new TestSquare(50, 50, 100, CENTER, true, true, color(0)),
+                                new TestSquare(150, 150, 100, CENTER, true, true, color(0)),
+                                new TestSquare(250, 250, 100, CENTER, true, true, color(0)),
+                                new TestCircle(50, 50, 100, CENTER, true, true, color(150)),
+                                new TestCircle(150, 150, 100, CENTER, true, true, color(150)),
+                                new TestCircle(250, 250, 100, CENTER, true, true, color(150))];
         checkShapes(expectedShapes, actualShapes, false, true);
         checkOrderedPairOfShapes(expectedShapes[0], expectedShapes[3], actualShapes, false);
         checkOrderedPairOfShapes(expectedShapes[1], expectedShapes[4], actualShapes, false);
